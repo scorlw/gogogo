@@ -12,7 +12,7 @@ itemWidget::itemWidget(QWidget *parent) : QWidget(parent),
     m_image(":/pic/progressBar.png")
 {
     this->resize(300,37);
-    QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     sizePolicy.setHorizontalStretch(0);
     sizePolicy.setVerticalStretch(0);
     this->setSizePolicy(sizePolicy);
@@ -27,9 +27,9 @@ itemWidget::itemWidget(QWidget *parent) : QWidget(parent),
     QToolButton* addBtn = new QToolButton;
     QToolButton* subBtn = new QToolButton;
     QToolButton* delBtn = new QToolButton;
-    addBtn->resize(20,20);
-    subBtn->resize(20,20);
-    delBtn->resize(20,20);
+    addBtn->resize(10,10);
+    subBtn->resize(10,10);
+    delBtn->resize(10,10);
     addBtn->setStyleSheet("QToolButton{border-image: url(:/pic/add.png)}");
     subBtn->setStyleSheet("QToolButton{border-image: url(:/pic/remove.png)}");
     delBtn->setStyleSheet("QToolButton{border-image: url(:/pic/close.png)}");

@@ -12,6 +12,8 @@ Widget::Widget(QWidget *parent)
     QHBoxLayout* baseLayout = new QHBoxLayout(this);
     QVBoxLayout* itemLayout = new QVBoxLayout;
     QVBoxLayout* btnLayout = new QVBoxLayout;
+    itemLayout->setMargin(0);
+    itemLayout->setSpacing(0);
     baseLayout->addLayout(itemLayout);
     baseLayout->addLayout(btnLayout,20);
 
@@ -41,6 +43,7 @@ Widget::Widget(QWidget *parent)
         dialog->show();
         itemWidget* item = new itemWidget(this);
         itemLayout->addWidget(item);
+        item->setFixedHeight(37);
         item->show();
         connect(dialog,&itemDialog::setName,item,&itemWidget::setItem);
         connect(dialog,&itemDialog::unset,item,&itemWidget::close);
