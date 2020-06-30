@@ -15,7 +15,7 @@ Widget::Widget(QWidget *parent)
     itemLayout->setMargin(0);
     itemLayout->setSpacing(0);
     baseLayout->addLayout(itemLayout);
-    baseLayout->addLayout(btnLayout,20);
+    baseLayout->addLayout(btnLayout,15);
 
     QToolButton* addBtn = new QToolButton;
     QToolButton* closeBtn = new QToolButton;
@@ -43,7 +43,6 @@ Widget::Widget(QWidget *parent)
         dialog->show();
         itemWidget* item = new itemWidget(this);
         itemLayout->addWidget(item);
-        item->setFixedHeight(37);
         item->show();
         connect(dialog,&itemDialog::setName,item,&itemWidget::setItem);
         connect(dialog,&itemDialog::unset,item,&itemWidget::close);

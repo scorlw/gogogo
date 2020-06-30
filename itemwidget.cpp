@@ -34,13 +34,13 @@ itemWidget::itemWidget(QWidget *parent) : QWidget(parent),
     subBtn->setStyleSheet("QToolButton{border-image: url(:/pic/remove.png)}");
     delBtn->setStyleSheet("QToolButton{border-image: url(:/pic/close.png)}");
     baseLayout->addWidget(&itemName);
-    baseLayout->addSpacerItem(new QSpacerItem(10,37,QSizePolicy::Expanding));
+    baseLayout->addSpacerItem(new QSpacerItem(0,37,QSizePolicy::Expanding));
     baseLayout->addWidget(&proBar);
-    baseLayout->addSpacerItem(new QSpacerItem(10,37,QSizePolicy::Expanding));
+    baseLayout->addSpacerItem(new QSpacerItem(0,37,QSizePolicy::Expanding));
     baseLayout->addWidget(addBtn);
     baseLayout->addWidget(subBtn);
     baseLayout->addWidget(delBtn);
-
+    setFixedSize(249,37);
     connect(addBtn,&QToolButton::clicked,this,&itemWidget::cntP);
     connect(subBtn,&QToolButton::clicked,this,&itemWidget::cntS);
     connect(delBtn,&QToolButton::clicked,this,&itemWidget::delItem);

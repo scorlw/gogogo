@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     int y = settings->value("WindowGeometry/y").toInt();
     QDesktopWidget* desktopWidget = QApplication::desktop();
     QRect clientRect = desktopWidget->availableGeometry();
+    /*
     if(x<0 || x>clientRect.width() || y<0 || y>clientRect.height())//如果上一次关闭软件的时候，窗口位置不正常，则本次显示在(1050,245)
     {
         w.move(1050,245);
@@ -26,7 +27,8 @@ int main(int argc, char *argv[])
     else{
         w.move(x, y);
     }
-
+    */
+    w.move(x, y);
     w.show();
 
     return a.exec();
